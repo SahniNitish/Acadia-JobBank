@@ -79,7 +79,7 @@ export const createMemoizedSearch = <T>(
 ) => {
   const cache = new Map<string, T[]>()
 
-  return useCallback((items: T[], query: string): T[] => {
+  return (items: T[], query: string): T[] => {
     const cacheKey = `${JSON.stringify(items)}-${query}`
     
     if (cache.has(cacheKey)) {
@@ -96,7 +96,7 @@ export const createMemoizedSearch = <T>(
     }
 
     return result
-  }, [searchFunction])
+  }
 }
 
 // Virtual scrolling hook for large lists

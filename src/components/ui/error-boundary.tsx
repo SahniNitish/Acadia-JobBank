@@ -140,7 +140,7 @@ export function PageErrorBoundary({ children }: { children: ReactNode }) {
               <AlertTriangle className="mx-auto h-12 w-12 text-red-500 mb-4" />
               <CardTitle>Page Error</CardTitle>
               <CardDescription>
-                This page encountered an error and couldn't load properly.
+                This page encountered an error and could not load properly.
               </CardDescription>
             </CardHeader>
             <CardContent>
